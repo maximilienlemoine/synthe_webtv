@@ -11,51 +11,66 @@ $(document).ready(function(){
         var macc = io.connect("http://localhost:1337", connectionOptions);
            
 //  Envoie basique
-            $('#tlance').click(function(){
-                macc.emit("backtoserveur", { 'action':1, 'info':$("#info").val()})
-                $('#tlance').hide()
-                $('#trentre').show()
+            $('#comlance').click(function(){
+                if ($("#info").val()!=''){
+                    macc.emit("backtoserveur", { 'action':1, 'info':$("#info").val()})
+                    $('#comlance').hide()
+                    $('#comrentre').show()
+                }
             })
-            $('#trentre').click(function(){
+            $('#comrentre').click(function(){
                 macc.emit("backtoserveur", { 'action':0, 'info':''})
-                $('#trentre').hide()
-                $('#tlance').show()
+                $('#comrentre').hide()
+                $('#comlance').show()
             })
 
 // Timer 
             $('#tempsplay').click(function(){
-                if ($("#tini").val()==""){
-                    alert('Vous n\'avez pas rentré de valeur')
-                } else {
-                    if (tempo!=1){
-                    tempo=1
-                    if (temps==''){
-                        lance($("#tini").val())
+                if (tempo!=3){
+                    if ($("#tini").val()==""){
+                        alert('Vous n\'avez pas rentré de valeur')
+                    } else {
+                        if (tempo!=1){
+                        tempo=1
+                        if (temps==''){
+                            lance($("#tini").val())
+                        }
+                        $('#tempsplay').hide()
+                        $('#tempspause').show() 
                     }
                 }
-                $('#tempsplay').hide()
-                $('#tempspause').show()
             }   
             })
             $('#tempspause').click(function(){
+                if (tempo!=3){
                 tempo=0
                 $('#tempspause').hide()
                 $('#tempsplay').show()
+                } else{
+                    $('#tempspause').hide()
+                    $('#tempsplay').show()
+                }
             })
             $('#tempshide').click(function(){
-                tempo=2
-                $('.temps').hide()
-                macc.emit("backtoserveur",{'action':'thide', 't':''})
-                $('#tempshide').hide()
-                $('#tempsshow').show()
+                if (tempo!=3){
+                    if ($("#tini").val()!=""){
+                        tempo=2
+                        // $('.temps').hide()
+                        macc.emit("backtoserveur",{'action':'thide', 't':''})
+                        $('#tempshide').hide()
+                        $('#tempsshow').show()
+                    }
+                } 
+                
             })
             $('#tempsshow').click(function(){
+                if (tempo!=3){
                     tempo=1
-                    $('.temps').show()
+                    // $('.temps').show()
                     macc.emit("backtoserveur",{'action':'tshow', 't':''})
                     $('#tempsshow').hide()
                     $('#tempshide').show()
-                
+                }
                 
             })
 
@@ -79,8 +94,8 @@ $(document).ready(function(){
                                 minute= "0" + minute
                             }
                             if (minute<=0 + seconde==0){
-                                $('.temps').hide()
-                                tempo=0
+                                // $('.temps').hide()
+                                tempo=3
                                 macc.emit("backtoserveur",{'action':'thide', 't':''})
                             }
                             temps=minute +':'+ seconde

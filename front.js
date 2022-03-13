@@ -12,8 +12,8 @@ var temps=''
         console.log('go')
         macc.on('serveurtofront',function(recup){
             console.log(recup)
-            if (recup.action==1) $('#synthe').html(recup.info).effect('slide', 500);
-            if (recup.action==0) $('#synthe').toggle('slide',500);
+            if (recup.action==1) $('#commentaire').html(recup.info).effect('slide', { direction: "right" }, 500); 
+            if (recup.action==0) $('#commentaire').toggle('slide', { direction: "right" },500);
             if (recup.action==3) {
                 $('#taffiche').html(recup.t);
                

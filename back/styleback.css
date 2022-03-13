@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    padding: 3vh;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 3vh;
+    grid-column-gap: 3vh;
+    justify-items: center;
+}
+article{
+    width: 100%;
+    height: 150px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+    
+}
+h2{
+    text-align: center;
+}
+
+/* Gestion Timer */
+#gtimer{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2vh;
+}
+#tbutton{
+    padding: 1vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+.temps{
+    padding: 1vh;
+    display: flex;
+    justify-content: center;
+}
+#tempshide{
+    background-color:#c72828;
+    border-radius:15px;
+    border:1px solid #e62727;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    padding: 1vh 5vh;
+    text-decoration:none;
+}
+#tempshide:hover {
+    background-color:#ff0015;
+}
+#tempsshow{
+    display: none;
+    background-color:#1dcf4a;
+    border-radius:15px;
+    border:1px solid #18ab29;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    padding: 1vh 5vh;
+    text-decoration:none;
+}
+#tempsshow:hover {
+    background-color:#3c940d;
+}
+    
+#tempsplay{
+    background-color:#1dcf4a;
+    border-radius:15px;
+    border:1px solid #18ab29;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    padding: 1vh 5vh;
+    text-decoration:none;
+}
+#tempsplay:hover {
+    background-color:#3c940d;
+}
+
+#tempspause{
+    background-color:#c72828;
+    border-radius:15px;
+    border:1px solid #e62727;
+    display: none;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    padding: 1vh 5vh;
+    text-decoration:none;
+}
+#tempspause:hover {
+    background-color:#ff0015;
+}
+
+/* Gestion Commentaire */
+#gcom{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 2vh;
+    align-items: center;
+}
+#comrentre{
+    margin: 2vh;
+    display: none;
+    background-color:#c72828;
+    border-radius:15px;
+    border:1px solid #e62727;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    padding: 1vh 5vh;
+    text-decoration:none;
+}
+#comrentre:hover {
+    background-color:#ff0015;
+}
+
+#comlance{
+    margin: 2vh;
+    background-color:#1dcf4a;
+    border-radius:15px;
+    border:1px solid #18ab29;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    padding: 1vh 5vh;
+    text-decoration:none;
+}
+#comlance:hover {
+    background-color:#3c940d;
+}
+
+/* Gestion Logo */
+#glogo{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 2vh;
+    align-items: center;
+}
+#lshow{
+    display: none;
+    margin: 2vh;
+    padding: 0 5vh;
+    background-color:#1dcf4a;
+    border-radius:15px;
+    border:1px solid #18ab29;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    padding: 1vh 5vh;
+    text-decoration:none;
+}
+#lshow:hover {
+    background-color:#3c940d;
+}
+
+#lhide{
+    margin: 2vh;
+    padding: 1vh 5vh;
+    background-color:#c72828;
+    border-radius:15px;
+    border:1px solid #e62727;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    text-decoration:none;
+}
+#lhide:hover {
+    background-color:#ff0015;
+}
+#glogo img{
+    width: 20vh;
+    
+
+}
