@@ -103,7 +103,7 @@ $(document).ready(function(){
                             macc.emit("backtoserveur", {'action':3, 't':temps})
                         } 
                     }
-            },100)
+            },1000)
             }
 
         
