@@ -10,10 +10,10 @@ $(document).ready(function(){
         };
         var macc = io.connect("http://localhost:1337", connectionOptions);
            
-//  Envoie basique
+//  Envoie basique ( Commentaire)
             $('#comlance').click(function(){
-                if ($("#info").val()!=''){
-                    macc.emit("backtoserveur", { 'action':1, 'info':$("#info").val()})
+                if ($("#com").val()!=''){
+                    macc.emit("backtoserveur", { 'action':1, 'info':$("#com").val()})
                     $('#comlance').hide()
                     $('#comrentre').show()
                 }
@@ -23,6 +23,22 @@ $(document).ready(function(){
                 $('#comrentre').hide()
                 $('#comlance').show()
             })
+// Titre
+
+            $('#titrelance').click(function(){
+                if ($("#titre").val()!=''){
+                    macc.emit("backtoserveur", { 'action':'titrelance', 'info':$("#titre").val()})
+                    $('#titrelance').hide()
+                    $('#titrerentre').show()
+                }
+            })
+            $('#titrerentre').click(function(){
+                macc.emit("backtoserveur", { 'action':'titrerentre', 'info':''})
+                $('#titrerentre').hide()
+                $('#titrelance').show()
+            })
+
+
 
 // Timer 
             $('#tempsplay').click(function(){
@@ -105,9 +121,6 @@ $(document).ready(function(){
                     }
             },1000)
             }
-
-        
-//Timer
           
 //Logo        
          $('#lhide').click(function(){

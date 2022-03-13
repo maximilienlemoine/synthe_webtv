@@ -16,10 +16,18 @@
         <article>
             <div id='gcom'>
                 <h2>Commentaire</h2>
-                <input type="text" id="info">
+                <input type="text" id="com">
                 <button id="comlance"><i class="bi bi-arrow-right-square-fill"></i> Lancer</button>
                 <button id="comrentre"><i class="bi bi-arrow-left-square-fill"></i> Rentrer</button>
             </div><!-- gtitre -->
+        </article>
+        <article>
+            <div id='gtitre'>
+                <h2>Titre</h2>
+                <input type="text" id="titre">
+                <button id="titrelance"><i class="bi bi-arrow-right-square-fill"></i> Lancer</button>
+                <button id="titrerentre"><i class="bi bi-arrow-left-square-fill"></i> Rentrer</button>
+            </div><!-- logo -->
         </article>
         <article>
             <div id='gtimer'> 

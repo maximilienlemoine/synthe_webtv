@@ -144,6 +144,50 @@ h2{
     background-color:#3c940d;
 }
 
+
+/* Gestion Titre */
+
+#gtitre{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 2vh;
+    align-items: center;
+}
+#titrerentre{
+    margin: 2vh;
+    display: none;
+    background-color:#c72828;
+    border-radius:15px;
+    border:1px solid #e62727;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    padding: 1vh 5vh;
+    text-decoration:none;
+}
+#titrerentre:hover {
+    background-color:#ff0015;
+}
+
+#titrelance{
+    margin: 2vh;
+    background-color:#1dcf4a;
+    border-radius:15px;
+    border:1px solid #18ab29;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    padding: 1vh 5vh;
+    text-decoration:none;
+}
+#titrelance:hover {
+    background-color:#3c940d;
+}
+
+
 /* Gestion Logo */
 #glogo{
     display: flex;

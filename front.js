@@ -20,7 +20,10 @@ var temps=''
             }
             if (recup.action=='tshow') $('#taffiche').show()
             if (recup.action=='thide') $('#taffiche').hide()
-            if (recup.action=='lshow') $('#logo').show()+ console.log('test')
-            if (recup.action=='lhide') $('#logo').hide()+ console.log('hide')
+            if (recup.action=='lshow') $('#logo').show()
+            if (recup.action=='lhide') $('#logo').hide().effect('puff', 500)
+            if (recup.action=='titrelance') $('#titre').html(recup.info).show()
+            if (recup.action=='titrerentre') $('#titre').hide()
+           
 })
 })

@@ -19,7 +19,8 @@ body{
     position: absolute;
     color: black;
     top: 45vh;
-    left: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 8vh;
 }
 #logo{
@@ -27,4 +28,13 @@ body{
     width: 100px;
     top: 78vh;
     left: 5vh;  
+}
+#titre{
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: -80vh;
+    border-bottom:solid #fe9922 3px;
+    padding: 1vh 1vh;
+    transform: translate(-50%, -50%);
 }
