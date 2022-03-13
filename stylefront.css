@@ -38,3 +38,6 @@ body{
     padding: 1vh 1vh;
     transform: translate(-50%, -50%);
 }
+#score{
+    display: none;
+}

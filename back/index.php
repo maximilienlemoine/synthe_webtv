@@ -56,19 +56,19 @@
         <article id='gridquizz'>
             <div id='gridquiz'>
                 <div id='equipe1'>
-                    <p id='team2'>Equipe 1</p>
+                    <p id='team1'>Equipe 1</p>
                     <div class='nteam'>
                         <input type="text" name="nomteam1" id="nomteam1">
-                        <button>Confirmer</button>
+                        <button id='confnom1'>Confirmer</button>
                     </div><!-- nteam -->
                     <div class='gscores'>
-                        <button>-2</button>
-                        <button>-1</button>
-                        <button>0</button>
-                        <button>+1</button>
-                        <button>+2</button>
+                        <button id='t1m2'>-2</button>
+                        <button id='t1m1'>-1</button>
+                        <button id='t10'>0</button>
+                        <button id='t1p1'>+1</button>
+                        <button id='t1p2'>+2</button>
                     </div> <!-- Gscores -->
-                    <div class='score'>
+                    <div class='score1'>
                         0
                     </div> <!-- Score -->
                 </div> <!-- Equipe 1 -->
@@ -76,16 +76,16 @@
                     <p id='team2'>Equipe 2</p>
                     <div class='nteam'>
                         <input type="text" name="nomteam2" id="nomteam2">
-                        <button>Confirmer</button>
+                        <button id='confnom2'>Confirmer</button>
                     </div> <!-- NTeam -->
                     <div class='gscores'>
-                        <button>-2</button>
-                        <button>-1</button>
-                        <button>0</button>
-                        <button>+1</button>
-                        <button>+2</button>
+                        <button id='t2m2'>-2</button>
+                        <button id='t2m1'>-1</button>
+                        <button id='t20'>0</button>
+                        <button id='t2p1'>+1</button>
+                        <button id='t2p2'>+2</button>
                     </div> <!-- Gestion score -->
-                    <div class='score'>
+                    <div class='score2'>
                         0
                     </div> <!-- Score -->
                 </div> <!-- Equipe 2 -->

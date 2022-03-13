@@ -1,5 +1,5 @@
 
-var minute='', seconde=1, tempo=0, temps=''
+var minute='', seconde=1, tempo=0, temps='', scoret1=0, scoret2=2
 $(document).ready(function(){
             
             var connectionOptions =  {
@@ -133,6 +133,87 @@ $(document).ready(function(){
             $('#lshow').hide()
             $('#lhide').show()
         })
-        
 
+// Quizz
+        $('#quizzshow').click(function(){
+            $('#quizzshow').hide()
+            $('#quizzhide').show()
+            macc.emit('backtoserveur', { 'action':'showscore', 'info':''})
+        })
+        $('#quizzhide').click(function(){
+            $('#quizzhide').hide()
+            $('#quizzshow').show()
+            macc.emit('backtoserveur', { 'action':'hidescore', 'info':''})
+        })
+// Equipe 1
+        $('#confnom1').click(function(){
+            $('#team1').html($("#nomteam1").val())
+            macc.emit('backtoserveur', { 'action':'nameteam1', 'info':$('#nomteam1').val()})
+        })
+        $('#t1m2').click(function(){
+            scoret1= scoret1-2
+            $('.score1').html(scoret1)
+            macc.emit('backtoserveur', { 'action':'scoret1', 'info':scoret1})
+       
+
+        })
+        $('#t1m1').click(function(){
+            scoret1= scoret1-1
+            $('.score1').html(scoret1)
+            macc.emit('backtoserveur', { 'action':'scoret1', 'info':scoret1})
+       
+
+        })
+        $('#t10').click(function(){
+            scoret1= 0
+            $('.score1').html(scoret1)
+            macc.emit('backtoserveur', { 'action':'scoret1', 'info':scoret1})
+       
+
+        })
+        $('#t1p1').click(function(){
+            scoret1= scoret1+1
+            $('.score1').html(scoret1)
+            macc.emit('backtoserveur', { 'action':'scoret1', 'info':scoret1})
+       
+
+        })
+        $('#t1p2').click(function(){
+            scoret1= scoret1+2
+            $('.score1').html(scoret1)
+            macc.emit('backtoserveur', { 'action':'scoret1', 'info':scoret1})
+       
+
+        })
+// Equipe 2
+        $('#confnom2').click(function(){
+            $('#team2').html($("#nomteam2").val())
+            macc.emit('backtoserveur', { 'action':'nameteam2', 'info':$('#nomteam2').val()})
+        })
+        $('#t2m2').click(function(){
+            scoret2= scoret2-2
+            $('.score2').html(scoret1)
+            macc.emit('backtoserveur', { 'action':'scoret2', 'info':scoret2})
+        })
+        $('#t2m1').click(function(){
+            scoret2= scoret2-1
+            $('.score2').html(scoret1)
+            macc.emit('backtoserveur', { 'action':'scoret2', 'info':scoret2})
+        })
+        $('#t20').click(function(){
+            scoret2= 0
+            $('.score2').html(scoret1)
+            macc.emit('backtoserveur', { 'action':'scoret2', 'info':scoret2})
+        })
+        $('#t2p1').click(function(){
+            scoret2= scoret2+1
+            $('.score2').html(scoret1) 
+            macc.emit('backtoserveur', { 'action':'scoret2', 'info':scoret2})
+        })
+        $('#t2p2').click(function(){
+            scoret2= scoret2+2
+            $('.score2').html(scoret1)
+            macc.emit('backtoserveur', { 'action':'scoret2', 'info':scoret2})
+        })
+// Equipe 2
     }) //Close document

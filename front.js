@@ -8,10 +8,7 @@ $(document).ready(function(){
 };
 
 var macc = io.connect("http://localhost:1337", connectionOptions);
-var temps=''
-        console.log('go')
         macc.on('serveurtofront',function(recup){
-            console.log(recup)
             if (recup.action==1) $('#commentaire').html(recup.info).effect('slide', { direction: "right" }, 500); 
             if (recup.action==0) $('#commentaire').toggle('slide', { direction: "right" },500);
             if (recup.action==3) {
@@ -24,6 +21,11 @@ var temps=''
             if (recup.action=='lhide') $('#logo').hide().effect('puff', 500)
             if (recup.action=='titrelance') $('#titre').html(recup.info).show()
             if (recup.action=='titrerentre') $('#titre').hide()
-           
-})
-})
+            if (recup.action=='showscore') $('#score').show()
+            if (recup.action=='hidescore') $('#score').hide()
+            if (recup.action=='nameteam1') $('#nomt1').html(recup.info)
+            if (recup.action=='nameteam2') $('#nomt2').html(recup.info)
+            if (recup.action=='scoret1') $('#scoret1').html(recup.info)
+            if (recup.action=='scoret2') $('#scoret2').html(recup.info)
+}) /* Requete node */
+}) /* Document ready */

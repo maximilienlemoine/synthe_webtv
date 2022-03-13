@@ -22,6 +22,12 @@
 
     </div>
     <img src="images/logos2.png" alt="Logo de Au Canap" id='logo'>
+    <div id='score'>
+        <p id='nomt1'>Equipe 1</p>
+        <p id='scoret1'>0</p>
+        <p id='nomt2'>Equipe 2</p>
+        <p id='scoret2'>0</p>
+    </div>
 </body>
 <script type="text/javascript" src="front.js?a=<?php echo rand(0,1000000)  ?>"></script>
 
