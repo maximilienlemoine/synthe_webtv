@@ -231,6 +231,55 @@ h2{
 }
 #glogo img{
     width: 20vh;
-    
+}
 
+/* Equipe */
+
+#gridquizz{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+}
+#gridquiz{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1vh;
+}
+#equipe1{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    width: 48%;
+    height: 120px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#equipe2{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    width: 48%;
+    height: 120px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#quizzshowhide{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#quizzhide{
+    display: none;
+}
+#quizzshow, #quizzhide{
+    width: 50%;
+
+}
+#nomteam1, #nomteam2{
+    width: 50%;
+}
+.nteam{
+    display: flex;
+    justify-content: center;
 }

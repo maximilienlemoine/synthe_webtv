@@ -53,6 +53,48 @@
                 <img src="../images/logos2.png" alt="Logo webtv">
             </div><!-- logo -->
         </article>
+        <article id='gridquizz'>
+            <div id='gridquiz'>
+                <div id='equipe1'>
+                    <p id='team2'>Equipe 1</p>
+                    <div class='nteam'>
+                        <input type="text" name="nomteam1" id="nomteam1">
+                        <button>Confirmer</button>
+                    </div><!-- nteam -->
+                    <div class='gscores'>
+                        <button>-2</button>
+                        <button>-1</button>
+                        <button>0</button>
+                        <button>+1</button>
+                        <button>+2</button>
+                    </div> <!-- Gscores -->
+                    <div class='score'>
+                        0
+                    </div> <!-- Score -->
+                </div> <!-- Equipe 1 -->
+                <div id='equipe2'>
+                    <p id='team2'>Equipe 2</p>
+                    <div class='nteam'>
+                        <input type="text" name="nomteam2" id="nomteam2">
+                        <button>Confirmer</button>
+                    </div> <!-- NTeam -->
+                    <div class='gscores'>
+                        <button>-2</button>
+                        <button>-1</button>
+                        <button>0</button>
+                        <button>+1</button>
+                        <button>+2</button>
+                    </div> <!-- Gestion score -->
+                    <div class='score'>
+                        0
+                    </div> <!-- Score -->
+                </div> <!-- Equipe 2 -->
+            </div>
+            <div id='quizzshowhide'>
+            <button id='quizzshow'>Montrer</button>
+            <button id='quizzhide'>Cacher</button>
+            </div> <!-- quizzshowhide -->
+        </article> <!-- gridquizz -->
     </section>
 </body>
 <script type="text/javascript" src="back.js?a=<?php echo rand(0,1000000)  ?>"></script>
