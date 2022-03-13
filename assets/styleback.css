@@ -1,0 +1,32 @@
+body {
+	font-family: Arial;
+}
+
+table {
+	margin: 5px;
+}
+
+tr {
+	border: 5px;
+}
+
+#barre {
+	width: 50%;
+	float: left;
+}
+
+.vignette {
+	opacity: 1;
+	border: 1px solid  #FFF;
+	box-shadow: 2px 2px 2px #AAA;
+	
+}
+
+.active {
+	opacity: 1;
+	border: 1px solid #A00;
+}
+
+.nonactive {
+	opacity: 0.3;
+}
