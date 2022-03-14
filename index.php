@@ -25,8 +25,10 @@
     <div id='score'>
         <p id='nomt1'>Equipe 1</p>
         <p id='scoret1'>0</p>
-        <p id='nomt2'>Equipe 2</p>
+        <p id='tiret'> - </p>
         <p id='scoret2'>0</p>
+        <p id='nomt2'>Equipe 2</p>
+        
     </div>
 </body>
 <script type="text/javascript" src="front.js?a=<?php echo rand(0,1000000)  ?>"></script>

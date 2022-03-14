@@ -11,8 +11,9 @@ body{
     display: none;
     position: absolute;
     right: 10vh;
-    bottom: -86vh;
+    bottom: -90vh;
     border-bottom:solid #fe9922 3px;
+    font-size: 4vh;
     padding: 1vh 1vh;
 }
 #taffiche{
@@ -25,7 +26,7 @@ body{
 }
 #logo{
     position: absolute;
-    width: 100px;
+    width: 22vh;
     top: 78vh;
     left: 5vh;  
 }
@@ -38,6 +39,14 @@ body{
     padding: 1vh 1vh;
     transform: translate(-50%, -50%);
 }
+
+/* Score */
 #score{
-    display: none;
+    display: inline-flex;
+    position: absolute;
+    gap: 1vh;
+    left: 5vh;
+    top: 5vh;
+    border-bottom:solid #fe9922 3px;
+
 }

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    
+    $('#score').hide()
     var connectionOptions =  {
     "force new connection" : true,
     "reconnectionAttempts": "Infinity", 
@@ -9,6 +9,7 @@ $(document).ready(function(){
 
 var macc = io.connect("http://localhost:1337", connectionOptions);
         macc.on('serveurtofront',function(recup){
+            
             if (recup.action==1) $('#commentaire').html(recup.info).effect('slide', { direction: "right" }, 500); 
             if (recup.action==0) $('#commentaire').toggle('slide', { direction: "right" },500);
             if (recup.action==3) {

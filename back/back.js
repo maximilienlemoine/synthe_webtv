@@ -1,5 +1,5 @@
 
-var minute='', seconde=1, tempo=0, temps='', scoret1=0, scoret2=2
+var minute='', seconde=1, tempo=0, temps='', scoret1=0, scoret2=0
 $(document).ready(function(){
             
             var connectionOptions =  {
@@ -192,27 +192,27 @@ $(document).ready(function(){
         })
         $('#t2m2').click(function(){
             scoret2= scoret2-2
-            $('.score2').html(scoret1)
+            $('.score2').html(scoret2)
             macc.emit('backtoserveur', { 'action':'scoret2', 'info':scoret2})
         })
         $('#t2m1').click(function(){
             scoret2= scoret2-1
-            $('.score2').html(scoret1)
+            $('.score2').html(scoret2)
             macc.emit('backtoserveur', { 'action':'scoret2', 'info':scoret2})
         })
         $('#t20').click(function(){
             scoret2= 0
-            $('.score2').html(scoret1)
+            $('.score2').html(scoret2)
             macc.emit('backtoserveur', { 'action':'scoret2', 'info':scoret2})
         })
         $('#t2p1').click(function(){
             scoret2= scoret2+1
-            $('.score2').html(scoret1) 
+            $('.score2').html(scoret2) 
             macc.emit('backtoserveur', { 'action':'scoret2', 'info':scoret2})
         })
         $('#t2p2').click(function(){
             scoret2= scoret2+2
-            $('.score2').html(scoret1)
+            $('.score2').html(scoret2)
             macc.emit('backtoserveur', { 'action':'scoret2', 'info':scoret2})
         })
 // Equipe 2

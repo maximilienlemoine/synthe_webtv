@@ -35,7 +35,9 @@
                 <div class='temps'>
                     00:00
                 </div><!-- Temps -->
+                <div id='selectime'>
                 <input type="number" id="tini" placeholder="Minutes uniquement">
+                </div>
                 <div id='tbutton'>
                     <button id="tempsplay"><i class="bi bi-play-fill"></i> Play</button>
                     <button id="tempspause"><i class="bi bi-pause-fill"></i> Pause</button>
@@ -91,8 +93,8 @@
                 </div> <!-- Equipe 2 -->
             </div>
             <div id='quizzshowhide'>
-            <button id='quizzshow'>Montrer</button>
-            <button id='quizzhide'>Cacher</button>
+            <button id='quizzshow'> <i class="bi bi-eye-fill"></i> Montrer</button>
+            <button id='quizzhide'> <i class="bi bi-eye-slash-fill"></i> Cacher</button>
             </div> <!-- quizzshowhide -->
         </article> <!-- gridquizz -->
     </section>
