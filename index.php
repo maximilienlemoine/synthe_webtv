@@ -18,9 +18,10 @@
     <div id='taffiche'>
         
     </div>
+    <div id='pretitre'>
     <div id='titre'>
 
-    </div>
+</div></div>
     <img src="images/logos2.png" alt="Logo de Au Canap" id='logo'>
     <div id='score'>
         <p id='nomt1'>Equipe 1</p>
