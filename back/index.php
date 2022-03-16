@@ -43,6 +43,7 @@
                     <button id="tempspause"><i class="bi bi-pause-fill"></i> Pause</button>
                     <button id="tempshide"><i class="bi bi-eye-slash-fill"></i> Cacher</button>
                     <button id="tempsshow"><i class="bi bi-eye-fill"></i> Montrer</button>
+                    <button id="tempsclear"><i class="bi bi-trash-fill"></i> Clear</button>
                 </div><!-- tbutton -->
                 
             </div><!-- gtimer -->
@@ -95,6 +96,7 @@
             <div id='quizzshowhide'>
             <button id='quizzshow'> <i class="bi bi-eye-fill"></i> Montrer</button>
             <button id='quizzhide'> <i class="bi bi-eye-slash-fill"></i> Cacher</button>
+            <button id="quizzclearscores"><i class="bi bi-trash-fill"></i> Clear</button>
             </div> <!-- quizzshowhide -->
         </article> <!-- gridquizz -->
     </section>

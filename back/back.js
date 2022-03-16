@@ -1,5 +1,5 @@
 
-var minute='', seconde=1, tempo=0, temps='', scoret1=0, scoret2=0
+var minute='', seconde=1, tempo=0, temps='', scoret1=0, scoret2=0, timer=''
 $(document).ready(function(){
             
             var connectionOptions =  {
@@ -49,7 +49,35 @@ $(document).ready(function(){
                         if (tempo!=1){
                         tempo=1
                         if (temps==''){
-                            lance($("#tini").val())
+                            minute= $("#tini").val()
+                            
+                            macc.emit("backtoserveur",{'action':'tshow', 't':''})
+                            timer = setInterval(function(){
+                                if (tempo==1){
+                                    seconde--
+                                    if (seconde<10){
+                                        seconde= "0" + seconde
+                                    }
+                                    temps=minute +':'+ seconde
+                                    $('.temps').html(temps)
+                                    macc.emit("backtoserveur", {'action':3, 't':temps})
+                                    if (seconde==0){
+                                        seconde=59
+                                        minute--
+                                        if (minute<10){
+                                            minute= "0" + minute
+                                        }
+                                        if (minute<=0 + seconde==0){
+                                            // $('.temps').hide()
+                                            tempo=3
+                                            macc.emit("backtoserveur",{'action':'thide', 't':''})
+                                        }
+                                        temps=minute +':'+ seconde
+                                        $('.temps').html(temps)
+                                        macc.emit("backtoserveur", {'action':3, 't':temps})
+                                    } 
+                                }
+                        },1000)
                         }
                         $('#tempsplay').hide()
                         $('#tempspause').show() 
@@ -57,6 +85,20 @@ $(document).ready(function(){
                 }
             }   
             })
+            $('#tempsclear').click(function(){
+                    clearInterval(timer)
+                    tempo=0
+                    minute=0
+                    seconde=1
+                    temps=''
+                    $('.temps').html('00:00')
+                    macc.emit("backtoserveur",{'action':'thide', 't':''})
+                    $('#tempspause').hide()
+                    $('#tempsplay').show() 
+                    $('#tempsshow').hide()
+                    $('#tempshide').show()
+                })
+            
             $('#tempspause').click(function(){
                 if (tempo!=3){
                 tempo=0
@@ -91,37 +133,6 @@ $(document).ready(function(){
             })
 
 
-            function lance(minute){
-                $('.temps').show()
-                macc.emit("backtoserveur",{'action':'tshow', 't':''})
-                setInterval(function(){
-                    if (tempo==1){
-                        seconde--
-                        if (seconde<10){
-                            seconde= "0" + seconde
-                        }
-                        temps=minute +':'+ seconde
-                        $('.temps').html(temps)
-                        macc.emit("backtoserveur", {'action':3, 't':temps})
-                        if (seconde==0){
-                            seconde=59
-                            minute--
-                            if (minute<10){
-                                minute= "0" + minute
-                            }
-                            if (minute<=0 + seconde==0){
-                                // $('.temps').hide()
-                                tempo=3
-                                macc.emit("backtoserveur",{'action':'thide', 't':''})
-                            }
-                            temps=minute +':'+ seconde
-                            $('#temps').html(temps)
-                            macc.emit("backtoserveur", {'action':3, 't':temps})
-                        } 
-                    }
-            },1000)
-            }
-          
 //Logo        
          $('#lhide').click(function(){
             macc.emit("backtoserveur", { 'action':'lhide', 'info':''})
@@ -145,6 +156,13 @@ $(document).ready(function(){
             $('#quizzshow').show()
             macc.emit('backtoserveur', { 'action':'hidescore', 'info':''})
         })
+        $('#quizzclearscores').click(function(){
+            scoret1 = 0
+            scoret2 = 0
+            macc.emit('backtoserveur', { 'action':'scoret1', 'info':scoret1})
+            macc.emit('backtoserveur', { 'action':'scoret2', 'info':scoret2})
+        })
+
 // Equipe 1
         $('#confnom1').click(function(){
             $('#team1').html($("#nomteam1").val())
@@ -215,5 +233,5 @@ $(document).ready(function(){
             $('.score2').html(scoret2)
             macc.emit('backtoserveur', { 'action':'scoret2', 'info':scoret2})
         })
-// Equipe 2
-    }) //Close document
+
+}) //Close document

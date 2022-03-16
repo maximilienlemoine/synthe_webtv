@@ -102,6 +102,20 @@ h2{
     background-color:#ff0015;
 }
 
+#tempsclear{
+    background-color:#c72828;
+    border-radius:15px;
+    border:1px solid #e62727;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    padding: 1vh 5vh;
+    text-decoration:none;
+}
+#tempsclear:hover {
+    background-color:#ff0015;
+}
 /* Gestion Commentaire */
 #gcom{
     display: flex;
@@ -251,6 +265,20 @@ h2{
     display: flex;
     justify-content: space-evenly;
     padding: 1vh;
+}
+#quizzclearscores{
+    background-color:#c72828;
+    border-radius:15px;
+    border:1px solid #e62727;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    padding: 1vh 3vh;
+    text-decoration:none;
+}
+#quizzclearscores:hover {
+    background-color:#ff0015;
 }
 #equipe1{
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
