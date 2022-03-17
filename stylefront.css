@@ -14,14 +14,15 @@ body{
     /* width: 20vh; */
     right: 10vh;
     top: 83vh;
-    border-bottom:solid #fe9922 3px;
+    /* border-bottom:solid #fe9922 3px; */
     font-size: 4vh;
     padding: 1vh 1vh;
+    background-color: rgba(240, 240, 240, 0.45);
 }
 #taffiche{
     position: absolute;
-    color: black;
-    top: 45vh;
+    color: white;
+    top: 85vh;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 8vh;
@@ -29,8 +30,8 @@ body{
 #logo{
     position: absolute;
     width: 22vh;
-    top: 78vh;
-    left: 5vh;  
+    top: 5vh;
+    right: 10vh;  
 }
 #pretitre{
      display: flex;
