@@ -14,14 +14,30 @@ section{
     justify-items: center;
 }
 article{
+    display: none;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 15px;
+    
     
 }
 h2{
     text-align: center;
 }
+/* Aside */
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#aside{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    padding: 2vh;
+}
+
+
 
 /* Gestion Timer */
 #gtimer{
@@ -254,10 +270,12 @@ h2{
 }
 
 /* Equipe */
-
-#gridquizz{
+#arquizz{
     grid-column-start: 1;
     grid-column-end: 3;
+}
+#gridquizz{
+    
     display: flex;
     flex-direction: column;
 }
@@ -407,7 +425,7 @@ h2{
   box-shadow: none;
 }
 /* Images */
-#images{
+#arimg{
     width: 100%;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -438,5 +456,46 @@ h2{
     text-decoration:none;
 }
 #ajouter:hover {
+    background-color:#3c940d;
+}
+/* Titre Chronique */
+
+#gchronique{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 2vh;
+    align-items: center;
+}
+#chronrentre{
+    margin: 2vh;
+    display: none;
+    background-color:#c72828;
+    border-radius:15px;
+    border:1px solid #e62727;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    padding: 1vh 5vh;
+    text-decoration:none;
+}
+#chronrentre:hover {
+    background-color:#ff0015;
+}
+
+#chronlance{
+    margin: 2vh;
+    background-color:#1dcf4a;
+    border-radius:15px;
+    border:1px solid #18ab29;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    padding: 1vh 5vh;
+    text-decoration:none;
+}
+#chronlance:hover {
     background-color:#3c940d;
 }

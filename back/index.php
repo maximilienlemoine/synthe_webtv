@@ -12,25 +12,81 @@
     <title>Synthé 1.0</title>
 </head>
 <body>
+    <aside>
+        <h2>Choix de synthé !</h2>
+        <div id='aside'>
+    <div class="commentaire">
+    <input class="form-check-input" type="checkbox" value="" id="Ccom">
+    <label class="form-check-label" for="defaultCheck1" id='Acom'>
+        Commentaire
+    </label>
+    </div>
+    <div class="chron">
+    <input class="form-check-input" type="checkbox" value="" id="Cchron">
+    <label class="form-check-label" for="defaultCheck1" id='Achron'>
+        Titre Chronique
+    </label>
+    </div>
+    <div class="timer">
+    <input class="form-check-input" type="checkbox" value="" id="Ctimer">
+    <label class="form-check-label" for="defaultCheck1" id='Atimer'>
+        Timer
+    </label>
+    </div>
+    <div class="titre">
+    <input class="form-check-input" type="checkbox" value="" id="Ctitre">
+    <label class="form-check-label" for="defaultCheck1" id='Atitre'>
+        Titre
+    </label>
+    </div>
+    <div class="logo">
+    <input class="form-check-input" type="checkbox" value="" id="Clogo">
+    <label class="form-check-label" for="defaultCheck1" id='Alogo'>
+        Logo
+    </label>
+    </div>
+    <div class="score">
+    <input class="form-check-input" type="checkbox" value="" id="Cscores">
+    <label class="form-check-label" for="defaultCheck1" id='Ascores'>
+        Score
+    </label>
+    </div>
+    <div class="img">
+    <input class="form-check-input" type="checkbox" value="" id="Cimg">
+    <label class="form-check-label" for="defaultCheck1" id='Aimg'>
+        Image
+    </label>
+    </div>
+    </div><!-- #aside -->
+    </aside>
     <section>
-        <article>
+        <article id='arcom'>
             <div id='gcom'>
                 <h2>Commentaire</h2>
                 <input type="text" id="com">
                 <button id="comlance"><i class="bi bi-arrow-right-square-fill"></i> Lancer</button>
                 <button id="comrentre"><i class="bi bi-arrow-left-square-fill"></i> Rentrer</button>
-            </div><!-- gtitre -->
-        </article>
-        <article>
+            </div>
+        </article><!-- arcom -->
+        <article id='archronique'>
+            <div id='gchronique'>
+                <h2>Titre Chronique</h2>
+                <input type="text" id="chronique">
+                <button id="chronlance"><i class="bi bi-arrow-right-square-fill"></i> Lancer</button>
+                <button id="chronrentre"><i class="bi bi-arrow-left-square-fill"></i> Rentrer</button>
+            </div>
+        </article><!-- archronique -->
+        <article id='artitre'>
             <div id='gtitre'>
                 <h2>Titre</h2>
                 <input type="text" id="titre">
                 <button id="titrelance"><i class="bi bi-arrow-right-square-fill"></i> Lancer</button>
                 <button id="titrerentre"><i class="bi bi-arrow-left-square-fill"></i> Rentrer</button>
-            </div><!-- logo -->
-        </article>
-        <article>
-            <div id='gtimer'> 
+            </div>
+        </div>
+        </article><!-- artitre -->
+        <article id='artimer' >
+            <div id='gtimer'>
                 <h2>Timer</h2>
                 <div class='temps'>
                     00:00
@@ -45,18 +101,18 @@
                     <button id="tempsshow"><i class="bi bi-eye-fill"></i> Montrer</button>
                     <button id="tempsclear"><i class="bi bi-trash-fill"></i> Clear</button>
                 </div><!-- tbutton -->
-                
-            </div><!-- gtimer -->
-        </article>
-        <article>
+                </div>
+        </article><!-- artimer -->
+        <article id='arlogo'>
             <div id='glogo'>
                 <h2>Logo</h2>
                 <button id="lhide"><i class="bi bi-eye-slash-fill"></i> Cacher</button>
                 <button id="lshow"><i class="bi bi-eye-fill"></i> Montrer</button>
                 <img src="../images/logos2.png" alt="Logo webtv">
-            </div><!-- logo -->
-        </article>
-        <article id='gridquizz'>
+            </div>
+        </article><!-- arlogo -->
+        <article id='arquizz'>
+            <div id='gridquizz'>
             <div id='gridquiz'>
                 <div id='equipe1'>
                     <p id='team1'>Equipe 1</p>
@@ -98,8 +154,10 @@
             <button id='quizzhide'> <i class="bi bi-eye-slash-fill"></i> Cacher</button>
             <button id="quizzclearscores"><i class="bi bi-trash-fill"></i> Clear</button>
             </div> <!-- quizzshowhide -->
-        </article> <!-- gridquizz -->
-        <article id='images'>
+            </div>
+        </article> <!-- arquizz -->
+        <article id='arimg'>
+            <div  id='images'>
             <div class="form">
                 <form method="post" action="ajout_image.php" enctype="multipart/form-data" class="import" target="_blank">
                 <input type="file" name="nouvelleImage" id="nouvelleimage"/>
@@ -122,6 +180,7 @@
                 }
                 $contenu->close();
             ?>
+            </div>
             </div>
         </article><!-- images -->
     </section>

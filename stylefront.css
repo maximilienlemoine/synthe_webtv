@@ -7,11 +7,11 @@ body{
     padding: 2vh;
     overflow-x: hidden;
     overflow-y: hidden;
+    /* background-color: black; */
 }
 #commentaire{
     display: none;
     position: absolute;
-    /* width: 20vh; */
     right: 10vh;
     top: 83vh;
     /* border-bottom:solid #fe9922 3px; */
@@ -32,6 +32,16 @@ body{
     width: 22vh;
     top: 5vh;
     right: 10vh;  
+}
+#titrechron{
+    display: none;
+    position: absolute;
+    left: 3vh;
+    top: 15vh;
+    border-bottom:solid #fe9922 3px;
+    font-size: 4vh;
+    padding: 1vh 1vh;
+    background-color: rgba(240, 240, 240, 0.45);
 }
 #pretitre{
      display: flex;
