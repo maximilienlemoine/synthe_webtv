@@ -406,3 +406,37 @@ h2{
   background-color: #0064bd;
   box-shadow: none;
 }
+/* Images */
+#images{
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.form{
+    display: flex;
+    justify-content: center;
+}
+#imagerangement{
+    display: flex;
+    justify-content: space-evenly;
+}
+.images img{
+    width: 15vh;
+}
+
+#ajouter{
+    margin: 1vh;
+    padding: 0 2vh;
+    background-color:#1dcf4a;
+    border-radius:15px;
+    border:1px solid #18ab29;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    padding: 1vh 2vh;
+    text-decoration:none;
+}
+#ajouter:hover {
+    background-color:#3c940d;
+}
