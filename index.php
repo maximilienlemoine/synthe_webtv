@@ -18,6 +18,9 @@
     <div id='taffiche'>
         
     </div>
+    <div id='titrechron'>
+
+    </div>  
     <div id='pretitre'>
     <div id='titre'>
 

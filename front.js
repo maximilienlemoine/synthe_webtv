@@ -22,6 +22,8 @@ var macc = io.connect("http://localhost:1337", connectionOptions);
             if (recup.action=='lhide') $('#logo').hide(300)
             if (recup.action=='titrelance') $('#titre').html(recup.info).effect('slide', { direction: "down" }, 1000); 
             if (recup.action=='titrerentre') $('#titre').toggle('slide', { direction: "down" },1000);
+            if (recup.action=='titrechronlance') $('#titrechron').html(recup.info).effect('slide', { direction: "left" }, 500); 
+            if (recup.action=='titrechronrentre') $('#titrechron').toggle('slide', { direction: "left" },500);
             if (recup.action=='showscore') $('#score').show().effect('slide', { direction: "left" }, 500); 
             if (recup.action=='hidescore') $('#score').toggle('slide', { direction: "left" },500);
             if (recup.action=='nameteam1') $('#nomt1').html(recup.info)

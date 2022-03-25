@@ -9,7 +9,66 @@ $(document).ready(function(){
             "transports" : ["websocket"]
         };
         var macc = io.connect("http://localhost:1337", connectionOptions);
-           
+
+//Affichage
+            $('#Ccom').change(function(){
+                    
+                if (this.checked){
+                    $('#arcom').show();
+                } else{
+                    $('#arcom').hide();
+                };
+            });
+            $('#Ctimer').change(function(){
+                    
+                if (this.checked){
+                    $('#artimer').show();
+                } else{
+                    $('#artimer').hide();
+                };
+            });
+            $('#Ctitre').change(function(){
+                    
+                if (this.checked){
+                    $('#artitre').show();
+                } else{
+                    $('#artitre').hide();
+                };
+            });
+            $('#Clogo').change(function(){
+                    
+                if (this.checked){
+                    $('#arlogo').show();
+                } else{
+                    $('#arlogo').hide();
+                };
+            });
+            $('#Cscores').change(function(){
+                    
+                if (this.checked){
+                    $('#arquizz').show();
+                } else{
+                    $('#arquizz').hide();
+                };
+            });
+            $('#Cimg').change(function(){
+                    
+                if (this.checked){
+                    $('#arimg').show();
+                } else{
+                    $('#arimg').hide();
+                };
+            });
+            $('#Cchron').change(function(){
+                    
+                if (this.checked){
+                    $('#archronique').show();
+                } else{
+                    $('#archronique').hide();
+                };
+            });
+
+
 //  Envoie basique ( Commentaire)
             $('#comlance').click(function(){
                 if ($("#com").val()!=''){
@@ -23,6 +82,22 @@ $(document).ready(function(){
                 $('#comrentre').hide()
                 $('#comlance').show()
             })
+// Titre Chronique
+
+            $('#chronlance').click(function(){
+                if ($("#chronique").val()!=''){
+                    macc.emit("backtoserveur", { 'action':'titrechronlance', 'info':$("#chronique").val()})
+                    $('#chronlance').hide()
+                    $('#chronrentre').show()
+                }
+            })
+            $('#chronrentre').click(function(){
+                macc.emit("backtoserveur", { 'action':'titrechronrentre', 'info':''})
+                $('#chronrentre').hide()
+                $('#chronlance').show()
+            })
+
+
 // Titre
 
             $('#titrelance').click(function(){
@@ -172,36 +247,26 @@ $(document).ready(function(){
             scoret1= scoret1-2
             $('.score1').html(scoret1)
             macc.emit('backtoserveur', { 'action':'scoret1', 'info':scoret1})
-       
-
         })
         $('#t1m1').click(function(){
             scoret1= scoret1-1
             $('.score1').html(scoret1)
             macc.emit('backtoserveur', { 'action':'scoret1', 'info':scoret1})
-       
-
         })
         $('#t10').click(function(){
             scoret1= 0
             $('.score1').html(scoret1)
             macc.emit('backtoserveur', { 'action':'scoret1', 'info':scoret1})
-       
-
         })
         $('#t1p1').click(function(){
             scoret1= scoret1+1
             $('.score1').html(scoret1)
             macc.emit('backtoserveur', { 'action':'scoret1', 'info':scoret1})
-       
-
         })
         $('#t1p2').click(function(){
             scoret1= scoret1+2
             $('.score1').html(scoret1)
             macc.emit('backtoserveur', { 'action':'scoret1', 'info':scoret1})
-       
-
         })
 // Equipe 2
         $('#confnom2').click(function(){
