@@ -1,5 +1,5 @@
 
-var minute='', seconde=1, tempo=0, temps='', scoret1=0, scoret2=0, timer=''
+var minute='', seconde=1, tempo=0, temps='', scoret1=0, scoret2=0, timer='', i = 1;
 $(document).ready(function(){
             
             var connectionOptions =  {
@@ -299,4 +299,86 @@ $(document).ready(function(){
             macc.emit('backtoserveur', { 'action':'scoret2', 'info':scoret2})
         })
 
+// Upload Images
+
+$('#uploadimage').on('submit', function (e) {
+    e.preventDefault();
+
+    var $form = $(this);
+    var formdata = (window.FormData) ? new FormData($form[0]) : null;
+    var data = (formdata !== null) ? formdata : $form.serialize();
+
+    $.ajax({
+        url: "loader.php",
+        type: "POST",
+        contentType: false, // obligatoire pour de l'upload
+        processData: false, // obligatoire pour de l'upload
+        //dataType: 'json', selon le retour attendu
+        data: data,
+        success: function (response) {
+            i++;
+            $('#imagerangement').append("<img class='vignette ui-widget-content' id='photo" + i + "' src='../images/" + response + "' width='100px' /> ");
+            var laphoto = response;
+            $("#photo" + i).click(function () {
+                console.log("envois image " + laphoto);
+                macc.emit("clientversserveur", { type: "master", action: "10", image: laphoto, cle_appli: 32411 });
+                //if() si diapo active tous les deverouiller
+                if ($(this).hasClass("active")) {
+                    $(this).removeClass("active");
+                    $(".vignette").removeClass("nonactive");
+                }
+                else {
+                    $(".vignette").removeClass("active");
+                    $(".vignette").addClass("nonactive");
+                    $(this).removeClass("nonactive").addClass("active");
+                }
+            });
+            $("#photo" + i).draggable({ grid: [5, 5] });
+        }
+    });
+});
+
+// Listing images
+$.ajax({
+    url: "listing.php",
+    dataType: "xml",
+    success: function (recupxml) {
+        console.log("recuperation ok");
+
+        $(recupxml).find('image').each(function () {
+            var laphoto = $(this).find('photo').text();
+            i++;
+            z = i * 5;
+            $('#imagerangement').append("<img class='vignette ui-widget-content' id='image" + i + "' src='../images/" + laphoto + "' width='100px' /> ");
+
+            $("#image" + i).click(function () {
+                console.log("envois image " + laphoto);
+                macc.emit("mastertoserveur", { type: "master", action: "10", image: laphoto, cle_appli: 32411 });
+                //if() si diapo active tous les deverouiller
+                if ($(this).hasClass("active")) {
+                    $(this).removeClass("active");
+                    $(".vignette").removeClass("nonactive");
+                }
+                else {
+                    $(".vignette").removeClass("active");
+                    $(".vignette").addClass("nonactive");
+                    $(this).removeClass("nonactive").addClass("active");
+                }
+            });
+        });
+        console.log("lancement draggable");
+        $(".vignette").draggable({ grid: [5, 5] });
+        $("#poub").droppable({
+            drop: function (event, ui) {
+                var id = ui.draggable.attr("id");
+                $(".vignette").removeClass("nonactive");
+                $("#" + id).hide();
+                var photosrc = $("#" + id).attr('src');
+                $.ajax("supprime.php?f=" + photosrc);
+                //alert(photosrc); 
+
+            }
+        });
+    }
+});
 }) //Close document

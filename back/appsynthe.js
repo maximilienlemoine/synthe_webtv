@@ -5,10 +5,10 @@ var io = require("socket.io")(1337);
 
 
 io.sockets.on('connection', function(client){
-		console.log("un client connecté");
+		console.log("interface connecté");
 		//client.emit("affichage", info );
 		client.on('backtoserveur', function(info){ 
-										console.log("le master parle... "+info);
+										console.log("back emit "+info);
 										io.sockets.emit("serveurtofront", info );
 										});
 			} );

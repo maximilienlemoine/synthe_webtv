@@ -159,30 +159,17 @@
         <article id='arimg'>
             <div  id='images'>
             <div class="form">
-                <form method="post" action="ajout_image.php" enctype="multipart/form-data" class="import" target="_blank">
+                <form method="POST" id='uploadimage'  action="" enctype="multipart/form-data" class="import" target="_blank">
                 <input type="file" name="nouvelleImage" id="nouvelleimage"/>
                 <input type="submit" value="Ajouter" id="ajouter"/>
                 </form>
             </div>
-            <div id='imagerangement'>
-            <?php
-                $contenu=dir('../images/');
-                while ($nomElement=$contenu->read()){
-                    
-                    if (!is_dir($nomElement)) {
-                        $extension=substr(strtolower($nomElement),-4);
-                        if (($extension=='.jpg') || ($extension=='.png')){
-                            echo '<a class="images" href="../images/'.$nomElement.'" target="_blank" <br/>'."\n";
-                            echo '<img src="../images/'.$nomElement.'" alt="'.$nomElement.'" > <br/>'."\n";
-                            echo '</a>'."\n";
-                        } 
-                    }
-                }
-                $contenu->close();
-            ?>
-            </div>
             </div>
         </article><!-- images -->
+        <article>
+            <div id='imagerangement'>
+            </div>
+        </article>
     </section>
 </body>
 <script type="text/javascript" src="back.js?a=<?php echo rand(0,1000000)  ?>"></script>
